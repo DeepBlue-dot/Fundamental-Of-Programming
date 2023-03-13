@@ -7,17 +7,17 @@ int main ()
   cin>>B;
   float arr[B][5];
   
-    for(int I=0 ; I<B ; I++ )
+  for(int I=0 ; I<B ; I++ )
+  {
+    cout<<"Select Gender: 1.Male 2.Female\n"<<"->";
+    cin>>arr[I][0];
+    cout<<"Enter Height: ";
+    cin>>arr[I][1];
+    cout<<"Enter Mass: ";
+    cin>>arr[I][2];
+    arr[I][3] = arr[I][2]/(arr[I][1]*arr[I][1]);
+    if(arr[I][0] == 1)
     {
-      cout<<"Select Gender: 1.Male 2.Female\n"<<"->";
-      cin>>arr[I][0];
-      cout<<"Enter Height: ";
-      cin>>arr[I][1];
-      cout<<"Enter Mass: ";
-      cin>>arr[I][2];
-      arr[I][3] = arr[I][2]/(arr[I][1]*arr[I][1]);
-      if(arr[I][0] == 1)
-      {
       if (arr[I][3]<=20)
       {
         arr[I][4] = 1;
@@ -34,9 +34,9 @@ int main ()
       {
         cout<<"Select the appropriate numb\n";
       }
-      }
-      else if(arr[I][0] == 2)
-      {
+    }
+    else if(arr[I][0] == 2)
+    {
       if (arr[I][3]<=18)
       {
         arr[I][4] = 1;
@@ -53,12 +53,12 @@ int main ()
       {
         cout<<"Select the appropriate number";
       }
-      }
-      else
-      {
-        cout << "Invlid Gender";
-      }
-      }
+    }
+    else
+    {
+      cout << "Invlid Gender";
+    }
+ }
 
 
       cout << "\t" << "Gender\t" << "Hieght\t" << "Mass\t" << "BMI\t" << "Health\n";
@@ -66,8 +66,7 @@ int main ()
       {
         cout << q+1 << "\t";
         for (int p = 0; p < 5; p++)
-        {
-          
+        {          
           if(p == 0)
           {
               if(arr[q][0] == 1)
@@ -101,7 +100,6 @@ int main ()
            
         }
         cout << endl;
-        
       }
   
 }
