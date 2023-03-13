@@ -2,15 +2,12 @@
 using namespace std;
 int main ()
 {
-  float h,w;
-  int Gen;
-  int I;
   int B;
   cout<<"The number of people: ";
   cin>>B;
   float arr[B][5];
   
-    for(I=0 ; I<B ; I++ )
+    for(int I=0 ; I<B ; I++ )
     {
       cout<<"Select Gender: 1.Male 2.Female\n"<<"->";
       cin>>arr[I][0];
@@ -57,11 +54,20 @@ int main ()
         cout<<"Select the appropriate number";
       }
       }
+      else
+      {
+        cout << "Invlid Gender";
       }
+      }
+
+
+      cout << "\t" << "Gender\t" << "Hieght\t" << "Mass\t" << "BMI\t" << "Health\n";
       for(int q =0; q < B; q++)
       {
+        cout << q+1 << "\t";
         for (int p = 0; p < 5; p++)
         {
+          
           if(p == 0)
           {
               if(arr[q][0] == 1)
