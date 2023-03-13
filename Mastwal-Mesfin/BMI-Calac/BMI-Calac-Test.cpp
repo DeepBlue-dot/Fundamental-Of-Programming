@@ -81,7 +81,7 @@ int main ()
             }
             else if(arr[q][4] == 2)
             {
-              cout << "helthy" <<"\t";
+              cout << "healthy" <<"\t";
             }
             else if(arr[q][4] == 3)
             {
